@@ -35,24 +35,24 @@ let menuItems = [
 function menuMaker(obj) {
   const menu = document.createElement('div')
   const menuUL = document.createElement('ul')
-  const menuLI = document.createElement('li')
+  
   
 
   menu.appendChild(menuUL);
-  menuUL.appendChild(menuLI);
 
-  const newArray = menuItems;
-  newArray.forEach(item =>{
-    menuLI.appendChild(item);
-    return newArray;
-  })
-
-  menuLI.textContent = newArray;
 
   
-  menu.classList.add('menu')
+  obj.forEach(linkContent =>{
+    const link = document.createElement('li');
+    link.textContent = linkContent;
+    menuUL.appendChild(link);
+  })
 
-  const menuButton = document.querySelector('.menu-button')
+   
+  menu.classList.add('menu');
+
+  const menuButton = document.querySelector('.menu-button');
+
   menuButton.addEventListener('click', () =>{
     menu.classList.toggle('menu--open')
   })
@@ -60,12 +60,6 @@ function menuMaker(obj) {
   return menu
 }
 
-const menuElements = menuItems.map(data =>{
-  return menuMaker(data);
-})
-
+const newMenu = menuMaker(menuItems)
 const headerMenu = document.querySelector('.header')
-
-menuElements.forEach(elem =>{
-  headerMenu.appendChild(elem)
-})
+headerMenu.appendChild(newMenu);

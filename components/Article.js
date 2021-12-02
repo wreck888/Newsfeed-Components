@@ -86,7 +86,30 @@ const data = [
     thirdParagraph: `Hodor hodor - hodor... Hodor hodor hodor hodor. Hodor. Hodor! Hodor hodor, hodor hodor hodor hodor hodor; hodor hodor? Hodor!
           Hodor hodor, HODOR hodor, hodor hodor?! Hodor! Hodor hodor, HODOR hodor, hodor hodor, hodor, hodor hodor. Hodor, hodor.
           Hodor. Hodor, hodor, hodor. Hodor hodor... Hodor hodor hodor?! Hodor, hodor... Hodor hodor HODOR hodor, hodor hodor. Hodor.`
-  }
+  }, {
+  title: 'Here is another Article!!!!',
+    date: 'Dec 1st, 2021',
+    firstParagraph: `as;ldkfgjaw;eoigjawe;oilgjasld;kgja;lsdkgjao;weirgjasdlkfjgsdagasdg `,
+
+    secondParagraph: `gaserg;lakjesg;laskdjga;sldkjg a;lsdkf ja;lweskfj awe;oif ja;sldkfj a;sldkvja;s dlkvajs;dlkf awoeif awefaewsfdasdfasdfa `,
+
+    thirdParagraph: `fa;lskfja;welsfkja;wlsekfjawl;skefjlwa;ekfjawekl;jklj` }
+    ,{
+      title: 'ANOTHER ONE!!!!',
+        date: 'Dec 1st, 2021',
+        firstParagraph: `aEFAWESFAWSELFKJA;LSKDFJ ;ALWKESJF A;LWSEFIJ ASDLF sdg `,
+    
+        secondParagraph: `gaserg;lakjesg;laskdjga;sldkDFAWEFAWEF A FAWEF AWEF AWEF AWEF AWE jg a;lsdkf ja;lweskfj awe;oif ja;sldkfj a;sldkvja;s dlkvajs;dlkf awoeif awefaewsfdasdfasdfa `,
+    
+        thirdParagraph: `fa;lskfja;welsfkja;wlsekfjaAFE AWE E AWFAWEF AWEF AWE Fwl;skefjlwa;ekfjawekl;jklj` 
+    },{
+          title: 'IT WORKS!!! ANOTHER ARTICLE!!!!',
+            date: 'Dec 1st, 2021',
+            firstParagraph: `as;ldkfgjaw;eoigjawe;oilgjasld;kgja;lsdkgjao;weirgjasdlkfjgsdagasdg `,
+        
+            secondParagraph: `gaserg;lakjesg;laskdjga;sldkjg a;lsdkf ja;lweskfj awe;oif ja;sldkfj a;sldkvja;s dlkvajs;dlkf awoeif awefaewsfdasdfasdfa `,
+        
+            thirdParagraph: `fa;lskfja;welsfkja;wlsekfjawl;skefjlwa;ekfjawekl;jklj` }
 ];
 
 /*
