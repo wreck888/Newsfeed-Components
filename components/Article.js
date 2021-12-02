@@ -86,7 +86,30 @@ const data = [
     thirdParagraph: `Hodor hodor - hodor... Hodor hodor hodor hodor. Hodor. Hodor! Hodor hodor, hodor hodor hodor hodor hodor; hodor hodor? Hodor!
           Hodor hodor, HODOR hodor, hodor hodor?! Hodor! Hodor hodor, HODOR hodor, hodor hodor, hodor, hodor hodor. Hodor, hodor.
           Hodor. Hodor, hodor, hodor. Hodor hodor... Hodor hodor hodor?! Hodor, hodor... Hodor hodor HODOR hodor, hodor hodor. Hodor.`
-  }
+  }, {
+  title: 'Here is another Article!!!!',
+    date: 'Dec 1st, 2021',
+    firstParagraph: `as;ldkfgjaw;eoigjawe;oilgjasld;kgja;lsdkgjao;weirgjasdlkfjgsdagasdg `,
+
+    secondParagraph: `gaserg;lakjesg;laskdjga;sldkjg a;lsdkf ja;lweskfj awe;oif ja;sldkfj a;sldkvja;s dlkvajs;dlkf awoeif awefaewsfdasdfasdfa `,
+
+    thirdParagraph: `fa;lskfja;welsfkja;wlsekfjawl;skefjlwa;ekfjawekl;jklj` }
+    ,{
+      title: 'ANOTHER ONE!!!!',
+        date: 'Dec 1st, 2021',
+        firstParagraph: `aEFAWESFAWSELFKJA;LSKDFJ ;ALWKESJF A;LWSEFIJ ASDLF sdg `,
+    
+        secondParagraph: `gaserg;lakjesg;laskdjga;sldkDFAWEFAWEF A FAWEF AWEF AWEF AWEF AWE jg a;lsdkf ja;lweskfj awe;oif ja;sldkfj a;sldkvja;s dlkvajs;dlkf awoeif awefaewsfdasdfasdfa `,
+    
+        thirdParagraph: `fa;lskfja;welsfkja;wlsekfjaAFE AWE E AWFAWEF AWEF AWE Fwl;skefjlwa;ekfjawekl;jklj` 
+    },{
+          title: 'IT WORKS!!! ANOTHER ARTICLE!!!!',
+            date: 'Dec 1st, 2021',
+            firstParagraph: `as;ldkfgjaw;eoigjawe;oilgjasld;kgja;lsdkgjao;weirgjasdlkfjgsdagasdg `,
+        
+            secondParagraph: `gaserg;lakjesg;laskdjga;sldkjg a;lsdkf ja;lweskfj awe;oif ja;sldkfj a;sldkvja;s dlkvajs;dlkf awoeif awefaewsfdasdfasdfa `,
+        
+            thirdParagraph: `fa;lskfja;welsfkja;wlsekfjawl;skefjlwa;ekfjawekl;jklj` }
 ];
 
 /*
@@ -114,3 +137,46 @@ const data = [
   Step 5: Try adding new article object to the data array. Make sure it is in the same format as the others.
   Refresh the page to see the new article.
 */
+  const articlesPage = document.querySelector('.articles')
+
+  function articleMaker(obj) {
+    const article = document.createElement('div');
+    const articleTitle = document.createElement('h2');
+    const articleDate = document.createElement('p');
+    const articleP1 = document.createElement('p');
+    const articleP2 = document.createElement('p');
+    const articleP3 = document.createElement('p');
+    const articleSpan = document.createElement('span');
+
+    article.appendChild(articleTitle);
+    article.appendChild(articleDate);
+    article.appendChild(articleP1);
+    article.appendChild(articleP2);
+    article.appendChild(articleP3);
+    article.appendChild(articleSpan);
+
+    article.classList.add('article');
+    articleDate.classList.add('date');
+    articleSpan.classList.add('expandButton');
+
+    articleSpan.textContent = '+';
+    articleTitle.textContent = obj.title;
+    articleDate.textContent = obj.date;
+    articleP1.textContent = obj.firstParagraph;
+    articleP2.textContent = obj.secondParagraph;
+    articleP3.textContent = obj.thirdParagraph;
+
+    articleSpan.addEventListener('click', (evt) => {
+      article.classList.toggle('article-open')
+    })
+
+    return article
+  }
+
+  const articleElements = data.map(obj => {
+    return articleMaker(obj);
+  })
+
+  articleElements.forEach(elem => {
+    articlesPage.appendChild(elem)
+  })
